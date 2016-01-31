@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+
+  <!-- <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script> -->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+
+  <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script type='text/javascript' 
+			src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js">
+	</script>
+	<script type='text/javascript' 
+			src='https://cdn.firebase.com/v0/firebase.js'>
+	</script>
+	<script type='text/javascript'
+	        src='https://cdn.firebase.com/v0/firebase-simple-login.js'>
+	</script>
+	
+	<script type='text/javascript' 
+			src="js/LoginViewModel.js" 
+			defer="defer">
+	</script>
+	
+	<script type='text/javascript' 
+			src="js/SignUpViewModel.js" 
+			defer="defer">
+	</script>
+	
+    <script type='text/javascript' 
+			src="js/AppViewModel.js" 
+			defer="defer">
+	</script>
+    
+	<script type='text/javascript' 
+			src="js/ViewModels.js" 
+			defer="defer">
+	</script>
+	
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+	
+</head>
+
+<body>
+	
+
+	<div id="signup" class="well" data-bind="visible: signupVM.isVisible">
+		<div  class="span">
+			
+		    <h1>Simple Signup and Login with Firebase</h1>
+		    <p>We will also be using knockout and bootstrap</p>
+		    <p>
+		    	<input type="text" class="input" placeholder="email" data-bind="value: signupVM.userName">
+		  		<input type="password" class="input" placeholder="Password" data-bind="value: signupVM.userPassword">
+		    </p>
+		    <p>	
+			    <a class="btn btn-primary btn-large" data-bind="click:signupVM.signup">
+					Sign Up
+			    </a>
+			</p>
+			<p>
+			or if you've registered just ...
+			</p>
+			<p>
+			    <a class="btn btn-default btn-small" data-bind="click: loginVM.makeVisible">
+					Log In
+			    </a>
+		    </p>
+	    </div>
+	</div>
+	
+	<div id="login" class="well" data-bind="visible: loginVM.isVisible">
+		<div class="span">
+		  	<h1>Simple Signup and Login with Firebase</h1>
+		    <p>We will also be using knockout and bootstrap</p>
+		    <p>
+		    	<input type="text" class="input" placeholder="Email" data-bind="value: loginVM.userName">
+		  		<input type="password" class="input" placeholder="Password" data-bind="value: loginVM.userPassword">
+		    </p>
+		    <p>	
+			    <a class="btn btn-primary btn-large" data-bind="click:loginVM.login">
+					Log In
+			    </a>
+			</p>
+		</div>
+	</div>
+	
+    <div id="app" class="well" data-bind="visible: appVM.isVisible">
+    
+    
+        <div class='container' style='margin-top: 50px;'>
+            <div class='col-md-9' style='border-style: solid; padding: 20px;'>
+
+                <div class='row'>
+                    <div class='col-md-5'>
+                        <!-- image here -->
+                        <img src="http://res.cloudinary.com/dpwenxuew/image/upload/v1454058213/Picture1_ka5pry.jpg"
+                        alt="Mountain View" style="width:304px;height:228px;">
+                    </div>
+                    <div class='col-md-7'>
+                        <h2 class='page-header'>Welcome to HealthProphet!</h2>
+                        <p>To begin, input the patient's vitals below.</p>
+                        <br>
+                        <button class='btn btn-primary btn-lg' onclick=" getRandomIntInclusive(0,2)">Enter patient's vitals</button>
+
+                    </div>
+
+                </div>
+
+            <br>
+            <h1 class='page-header'>Results</h1>
+            <p id='results'>You are okay!</p>
+        </div>
+        <div class='col-md-3' style='border-style: solid;  padding: 20px;'>
+            <h2 class='page-header'>Gauges</h2>
+            <br>
+            <p id="temp"></p>
+            <p id="BP"></p>
+            <p id="BSL"></p>
+
+        </div>
+    <!-- /col-md-6-->
+        </div>
+    </div>
+    
+    
+    
+    
+    
+</body>
+
+
+
+
+
