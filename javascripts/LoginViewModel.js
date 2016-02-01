@@ -15,7 +15,6 @@ var LoginViewModel = function(makeLoginViewVisible) {
 	    	alert("LOGIN SUCCESSFUL. Create a new AppViewModel for your app");
 	  	} else {
 	    	// user is logged out
-	    	ViewModels.appVM.isVisible(true);
 			console.log("User logged out");
 	  	}
 	});
