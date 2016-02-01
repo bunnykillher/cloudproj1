@@ -11,7 +11,7 @@ var AppViewModel = function(makeLoginViewVisible) {
             ViewModels.loginVM.isVisible(false);
     }
 }
-var myDataRef = new Firebase('https://cloudassignment1.firebaseio.com/');
+var myDataRef = new Firebase('logintrialcloud.firebaseapp.com');
     var temp = ["36.8°C", "37.4°C", "39.8°C"];
     var bloodPressure = ["120/80 mmHg", "140/90 mmHg", "90/60 mmHg"]
     var bloodSugarLevel = ["50 mg/dL", "170 mg/dL", "350 mg/dL"]
