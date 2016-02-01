@@ -11,7 +11,7 @@ var LoginViewModel = function(makeLoginViewVisible) {
 	  	} else if (user) {
 	    	// user authenticated with Firebase
 	    	console.log('Logging In User ID: ' + user.id + ', Provider: ' + user.provider);
-	    	ViewModels.appVM.isVisible(true);
+	    	
 	    	alert("LOGIN SUCCESSFUL. Create a new AppViewModel for your app");
 	  	} else {
 	    	// user is logged out
@@ -33,6 +33,7 @@ var LoginViewModel = function(makeLoginViewVisible) {
 	self.login = function() {
 		console.log("logging in");
 		self.isVisible(false);
+		ViewModels.appVM.isVisible(true);
 		authClient.login('password', {
 			email: self.userName(),
 		  	password: self.userPassword()
