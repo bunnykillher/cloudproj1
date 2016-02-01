@@ -11,7 +11,7 @@ var SignUpViewModel = function(makeLoginViewVisible) {
 	    	// user authenticated with Firebase
 	    	console.log('Logging In User ID: ' + user.id + ', Provider: ' + user.email);    
 	    	alert("Create a new AppViewModel for your app");
-	    	ViewModels.appVM.isVisible(true);
+	    	
 	  	} else {
 	    	// user is logged out
 			console.log("User logged out");
